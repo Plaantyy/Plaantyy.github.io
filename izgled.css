@@ -1,0 +1,185 @@
+
+h1 {
+  z-index: 1;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(133, 13, 13, 0.733);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  background: #11111175; 
+  border-radius: 25px;
+  padding: 20px;
+  width: 700px;
+  margin: 50px auto; 
+  position: relative; 
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.square {
+  z-index: 1;
+  width: 400px;           
+  height: 450px;           
+  background-color: rgba(30, 43, 224, 0.089); 
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style:italic;
+  color: rgba(255, 255, 255, 0.76);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  margin: 20px;
+  padding-top: 20px;
+  
+}
+
+
+
+input {
+  width: 220px;
+  height: 40px;
+  padding: 10px 15px;
+  margin: 40px auto;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #1f1f1f, #353434);
+  color: rgb(255, 0, 0);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s ease;
+  
+}
+
+input::placeholder {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+input:focus {
+  background: linear-gradient(145deg, #292929, #3a3a3a);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  color: #fff;
+}
+
+
+  .square {
+    width: 400px;
+    height: 450px;
+    background: #11111175; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px auto;
+    color: rgba(255, 0, 0, 0.795);
+    transition: all 0.5s ease;
+    text-shadow: 2px 2px 4px rgba(133, 13, 13, 0.733);
+  }
+  
+  .square::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      0deg, 
+      transparent, 
+      transparent 30%, 
+      rgba(255, 38, 0, 0.3)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .square:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.178);
+    cursor:crosshair;
+  }
+  
+  .square:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+  }
+  
+  .square * {
+    position: relative;
+    z-index: 2; /* Make sure content stays above the animation */
+  }
+
+  #Submit {
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+    color: rgba(255, 0, 0, 0.575);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  #Submit:hover {
+    background: linear-gradient(145deg, #292929, #3a3a3a);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  #Submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  }
+  
+  #Play {
+    padding: 50px 70px;
+    background: linear-gradient(145deg, #1f1f1f6b, #2d2d2d);
+    color: rgba(255, 0, 0, 0.575);
+    border: none;
+    border-radius: 8px;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin: 20px auto;
+  }
+
+  #Play:hover {
+    background: linear-gradient(145deg, #292929, #3a3a3a);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+    color: #fff;
+    transform: scale(1.05);
+    cursor:crosshair;
+  }
+  
+
+  #Play:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+
+  }
+  
+  body{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333;
+    cursor:crosshair;
+  }
